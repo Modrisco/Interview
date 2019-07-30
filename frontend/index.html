@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout</title>
+    <style media="screen">
+        html *{
+            padding: 0;
+            margin: 0;
+        }
+        .layout {
+            margin-top: 20px;
+        }
+        .layout article div {
+            min-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <section class="layout float">
+        <style media="screen">
+            .layout.float .left {
+                float: left;
+                width: 300px;
+                background-color: red;
+            }
+            .layout.float .right {
+                float: right;
+                width: 300px;
+                background-color: blue;
+            }
+            .layout.float .center {
+                background-color: yellow;
+            }
+        </style>
+        <article class="left-right-center">
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="center">
+                <h1>float</h1>
+                1.123<br>
+                2.223
+            </div>
+        </article>
+    </section>
+
+    <section class="layout absolute">
+        <style>
+            .layout.absolute .left-center-right>div {
+                position: absolute;
+            }
+            .layout.absolute .left{
+                left: 0;
+                width: 300px;
+                background-color: red;
+            }
+            .layout.absolute .center{
+                left: 300px;
+                right: 300px;
+                background-color: yellow;
+            }
+            .layout.absolute .right{
+                right: 0;
+                width: 300px;
+                background-color: blue;
+            }
+        </style>
+        <article class="left-center-right">
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="center">
+                <h1>absolute</h1>
+                1.123<br>
+                2.223
+            </div>
+        </article>
+    </section>
+
+    <section class="layout flexbox">
+        <style>
+            .layout.flexbox {
+                margin-top: 140px;
+            }
+            .layout.flexbox .left-center-right {
+                display: flex;
+            }
+            .layout.flexbox .left {
+                width: 300px;
+                background-color: red;
+            }
+            .layout.flexbox .center {
+                flex: 1;
+                background-color: yellow;
+            }
+            .layout.flexbox .right {
+                width: 300px;
+                background-color: blue;
+            }
+        </style>
+        <article class="left-center-right">
+            <div class="left"></div>
+            <div class="center">
+                <h1>flexbox</h1>
+                1.123<br>
+                2.223
+            </div>
+            <div class="right"></div>
+        </article>
+    </section>
+
+    <section class="layout table">
+        <style>
+            .layout.table .left-center-right {
+                width: 100%;
+                display: table;
+                height: 100px;
+            }
+            .layout.table .left-center-right>div{
+                display: table-cell;
+            }
+            .layout.table .left {
+                width: 300px;
+                background-color: red;
+            }
+            .layout.table .center {
+                background-color: yellow;
+            }
+            .layout.table .right {
+                width: 300px;
+                background-color: blue;
+            }
+        </style>
+        <article class="left-center-right">
+            <div class="left"></div>
+            <div class="center">
+                <h1>table</h1>
+                1.123<br>
+                2.223
+            </div>
+            <div class="right"></div>
+        </article>
+    </section>
+
+    <section class="layout grid">
+        <style media="screen">
+            .layout.grid .left-center-right {
+                display: grid;
+                width: 100%;
+                grid-template-rows: 100px;
+                grid-template-columns: 300px auto 300px;
+            }
+            .layout.grid .left {
+                background-color: red;
+            }
+            .layout.grid .center {
+                background-color: yellow;
+            }
+            .layout.grid .right {
+                background-color: blue;
+            }
+        </style>
+        <article class="left-center-right">
+            <div class="left"></div>
+            <div class="center">
+                <h1>grid</h1>
+                1.123<br>
+                2.223
+            </div>
+            <div class="right"></div>
+        </article>
+    </section>
+</body>
+</html>
