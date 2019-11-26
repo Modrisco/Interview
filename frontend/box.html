@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS box model</title>
+</head>
+<body>
+    <section id="sec">
+        <style media="screen">
+            html *{
+                margin: 0;
+                padding: 0;
+            }
+            #sec {
+                background: green;
+                overflow: hidden;
+            }
+            .child {
+                height: 100px;
+                margin-top: 10px;
+                background: yellow;
+            }
+        </style>
+        <article class="child"></article>
+    </section>
+    <form action="http://3.24.134.149:8080/api/login" method="post">
+        <input name="username"/>
+        <input name="password"/>
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>
